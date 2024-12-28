@@ -3,8 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-hasweny);
+  }
+
+  /* Ejemplos de clases para diferentes tamaños */
+  h1 {
+    @apply text-4xl font-hasweny;
+  }
+  a{
+    @apply text-base font-hasweny;
+  }
+  h2 {
+    @apply text-3xl font-hasweny;
+  }
+  p {
+    @apply text-base font-hasweny;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
