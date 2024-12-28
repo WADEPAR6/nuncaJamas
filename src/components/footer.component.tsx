@@ -1,5 +1,8 @@
+"use client"
+
 // src/components/footer/footer.component.tsx
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -33,7 +36,7 @@ const Footer = () => {
                         </p>
                     </h3>
                     <ul className="list-none p-0">
-                        <li className="my-1"><a href="/" className="text-blue-400 hover:underline">Inicio</a></li>
+                        <li className="my-1"><Link href="/" className="text-blue-400 hover:underline">Inicio</Link></li>
                         <li className="my-1"><a href="/about" className="text-blue-400 hover:underline">Sobre Nosotros</a></li>
                         <li className="my-1"><a href="/about/misionvision" className="text-blue-400 hover:underline">Misión y Visión</a></li>
                     </ul>

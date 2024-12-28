@@ -1,4 +1,5 @@
 // src/components/MisionVision.tsx
+"use client";
 import React from "react";
 
 const MisionVision: React.FC = () => {

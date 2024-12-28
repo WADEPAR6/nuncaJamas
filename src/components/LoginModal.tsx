@@ -1,3 +1,4 @@
+"use client";
 // src/components/LoginModal.tsx
 import React from 'react';
 

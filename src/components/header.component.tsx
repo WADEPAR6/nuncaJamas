@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import LoginModal from './LoginModal';
+import Link from 'next/link';
 import { FaSearch } from 'react-icons/fa';
 
 const Header = () => {
@@ -30,7 +31,9 @@ const Header = () => {
                 <Image src={isScrolled ? "/imgs/Solo-peterPan-Azul.png" : "/imgs/Solo-peterPan-Verde.png"} alt="Logo" width={50} height={50} />
                 <nav className="flex-1 text-center">
                     <ul className="flex justify-center space-x-8">
-                        <li><a href="/" className="hover:underline">INICIO</a></li>
+                        <li>
+                            <Link href="/" className="hover:underline">INICIO</Link>
+                        </li>
                         <li>
                             <div className="relative group">
                                 <button className="hover:underline">
@@ -47,9 +50,9 @@ const Header = () => {
                             </div>
                         </li>
                         <li>
-                            <button 
-                            // onClick={() => setIsModalOpen(true)} 
-                            className="hover:underline">
+                            <button
+                                // onClick={() => setIsModalOpen(true)} 
+                                className="hover:underline">
                                 <p>
                                     Iniciar Sesión
                                 </p>

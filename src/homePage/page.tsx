@@ -1,9 +1,10 @@
+"use client";
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaCandyCane, FaCookie, FaIceCream, FaMugHot } from 'react-icons/fa';
-import { fetchProducts, createProduct, deleteProduct } from '@/services/productService';
+import { fetchProducts, createProduct } from '@/services/productService';
 import ProductModal from '@/components/ProductModal';
 interface Product {
   id: string;
@@ -38,14 +39,14 @@ const CandyMenu: React.FC = () => {
     }
   };
 
-  const handleDeleteProduct = async (id: string) => {
-    try {
-      await deleteProduct(id);
-      setProducts((prevProducts) => prevProducts.filter((product) => product.id !== id));
-    } catch (error) {
-      console.error('Error al eliminar el producto:', error);
-    }
-  };
+  // const handleDeleteProduct = async (id: string) => {
+  //   try {
+  //     await deleteProduct(id);
+  //     setProducts((prevProducts) => prevProducts.filter((product) => product.id !== id));
+  //   } catch (error) {
+  //     console.error('Error al eliminar el producto:', error);
+  //   }
+  // };
 
   return (
     <div className="container mx-auto">
